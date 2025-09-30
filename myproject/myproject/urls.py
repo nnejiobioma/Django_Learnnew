@@ -16,7 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from . import views #Imported views and view is in the same directory as url that is why (.) is used if not you navigate to the part where the file is located
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.homepage), #created the home page part
+    path('about/', views.about), #Created the about page part
+
 ]
