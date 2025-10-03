@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %} <!-- Block for static style static file-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+    {% block title %} <!-- thi block is created for default heading. Also this will replace all default headings-->
+        Django App
+    {% endblock %}    
+    </title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> <!-- CSS style sheet import-->
+    <script src="{% static 'js/main.js'%}" defer></script> <!-- Java script style sheet import-->
+</head>
+<body>
+    <nav>
+        <a href="/">🏡</a> |
+        <a href="/about">🅰️</a> |
+        <a href="/">😶‍🌫️</a>
+    </nav>
+    <main>
+        {% block content %}
+        {% endblock %}
+
+    </main>
+    
+</body>
+</html>

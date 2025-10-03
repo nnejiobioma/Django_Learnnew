@@ -4,5 +4,5 @@ from . import views #Imported views and view is in the same directory as url tha
 
 urlpatterns = [
     path('', views.posts_list), #created the home page part
-    path('about', views.posts_about),
+    #path('about', views.posts_about),
 ]
